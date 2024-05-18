@@ -1,0 +1,58 @@
+//string is called immutable that means not changeable
+-------------------------------------------------------------
+const capital = 'Dhaka';
+
+capital[1] = 'S'
+console.log(capital);
+
+
+output: Dahka
+----------
+-------------------------=================---------------------------
+//Array is mutable that can be changed the array elements
+
+const numbers = [54,58,658,75,85,56];
+
+numbers[0] = 11;
+
+console.log(numbers)
+
+---------------------------------------------------------tolowercase()
+const school = 'RAJUk Uttara model school';
+
+console.log(school)
+
+console.log(school.toLowerCase())
+
+----------------------------------------------------touppercase()
+
+const school = 'RAJUk Uttara model school';
+
+console.log(school)
+
+console.log(school.toUpperCase())
+
+------------------------------------------------------------
+
+const subject =  'Chemistry';
+const book = 'chemistry';
+
+if(subject.toLowerCase() === book.toLowerCase()){
+   console.log('I am reading Book aibar porikkhali fatai felmu');
+}else{
+   console.log('Hudia prista ultai ar vat khawar jonno');
+}
+
+------------------------------------------------------------trim()
+
+const drink = 'water';
+const liquid = '   water     '
+
+if(drink.trim() === liquid.trim()){
+   console.log('Pani ar opor name life.')
+}else{
+   console.log('Somodre pain ase khaite pari na')
+}
+
+
+

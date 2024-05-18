@@ -1,0 +1,247 @@
+Array:
+const numbers = [12, 14, 15, 20, 65, 88, 65, 54, 85, 75];
+console.log(numbers[3]);
+-------------------------------------------------
+
+const numbers = [12, 14, 15, 20, 65, 88, 65, 54, 85, 75];
+numbers[5] = 22;
+console.log(numbers[5])
+
+---------------------------------------------
+
+const ages = [];
+const numbers = [12, 87, 98, 45];
+
+console.log(numbers)
+numbers.push(20)
+console.log(numbers)
+output: 	[ 12, 87, 98, 45 ]
+	[ 12, 87, 98, 45, 20 ]
+
+------------------------------------------------
+
+const ages = [];
+const numbers = [12, 87, 98, 45];
+
+numbers.push(55)
+numbers.push(89,65)
+numbers.push(32)
+numbers.push('Arman')
+console.log(numbers)
+
+output: [ 12, 87, 98, 45, 55, 89, 65, 32, 'Arman' ]
+
+-------------------------------------------
+const friends = ['Balam', 'Kalam', 'Salam'];
+friends.push('Ali')
+
+console.log(friends)
+
+output: [ 'Balam', 'Kalam', 'Salam', 'Ali' ]
+
+--------------------------------------------------------
+const friends = ['Balam', 'Kalam', 'Salam'];
+friends.pop();
+console.log(friends)
+
+output: [ 'Balam', 'Kalam' ]
+
+--------------------------------------------------------
+const friends = ['Balam', 'Kalam', 'Salam'];
+console.log(friends)
+friends.shift();
+
+console.log(friends);
+output: 	[ 'Balam', 'Kalam', 'Salam' ]
+	[ 'Kalam', 'Salam' ]
+
+-----------------------------------------
+
+const friends = ['Balam', 'Kalam', 'Salam'];
+console.log(friends)
+friends.unshift('Arman');
+
+console.log(friends);
+
+output:
+[ 'Balam', 'Kalam', 'Salam' ]
+[ 'Arman', 'Balam', 'Kalam', 'Salam' ]
+
+-----------------------------------------------
+
+const friends = ['Arman', 'Al-amin', 'Abbas', 'Mamun', 'Abir']
+
+console.log(friends.includes('Arman'));
+
+output: true
+
+------------------------------------------------------------
+
+const friends = ['Arman', 'Al-amin', 'Abbas', 'Mamun', 'Abir']
+
+
+if (friends.includes('Abir')) {
+   console.log('Party')
+   
+} else {
+   console.log('NO foods we will not eat')
+}
+
+------------------------
+
+const friends = ['Arman', 'Al-amin', 'Abbas', 'Mamun', 'Abir']
+
+console.log(friends.indexOf('Abir'))
+
+output: 4
+
+-------------------------------------------
+
+const friends = ['Arman', 'Al-amin', 'Abbas', 'Mamun', 'Abir']
+
+console.log(friends.indexOf('Tomato'))
+
+output: -1;
+
+-------------------------------------------
+
+const friends = ['Arman', 'Al-amin', 'Abbas', 'Mamun', 'Abir']
+
+const nums = [];
+
+const food = 'ros o gol l a'
+
+const  age = 15;
+
+
+console.log(Array.isArray(friends))
+console.log(Array.isArray(nums))
+console.log(Array.isArray(food))
+console.log(Array.isArray(age))
+
+output: true, true, false, false
+
+--------------------------------------------------
+
+const names = ['Arman', 'Ali', 'Tormoj', 'Baba','Amin']
+
+if (Array.isArray(names)) {
+   console.log('I am a Array')
+   
+} else {
+   console.log('I am not a Array')
+}
+
+--------------------------------------------
+const names = ['Arman', 'Khan', 'Yeassin'];
+const roll = [1, 2, 3];
+
+console.log(names.concat(roll));
+
+------------------------------switch-----------------------
+const dayOfWeek = 2;
+
+switch(dayOfWeek){
+   case 1:
+      console.log('Saturday')
+      break;
+   case 2:
+      console.log('Sunday')
+      break;
+   case 3:
+      console.log('Monday')
+      break;
+   case 4:
+      console.log('Tuesday')
+      break;
+   case 5:
+      console.log('Wednesday')
+      break;
+   case 6:
+      console.log('Thursday')
+      break;
+   case 7:
+      console.log('Friday')
+      break;
+   default:
+      console.log('Invaiiled Day')
+}
+
+output: Sunday.
+
+----------------------------------------------------
+
+const lightCondition = false;
+
+switch (lightCondition) {
+   case true:
+      console.log('Light On')
+      break;
+   case false:
+      console.log('Light Off');
+      break;
+
+   default:
+      console.log('Your provided input is not correct!')
+
+      break;
+}
+
+==========================  array part 2  =======================
+const friends = ['Elon', 'Bill', 'mark', 'Waren']
+
+for(let i = 0; i < friends.length; i++){
+   console.log(friends[i])
+}
+
+---------------------------------------------------------
+let i = 0;
+while(i < numbers.length){
+   console.log(numbers[i]);
+   i++;
+}
+
+----------------------------------------------------array reverse--
+const numbers = [1,2,3,4,5,6,7,8,9];
+console.log(numbers)
+numbers.reverse()
+console.log(numbers)
+
+----------------------------------------------array reverse using unshift(variable name)......
+
+const numbers = [1,2,3,4,5,6,7,8,9];
+
+const rev_numbers = [];
+
+for(const num of numbers){
+   console.log(num);
+   rev_numbers.unshift(num);
+}
+console.log(rev_numbers)
+
+--------------------------------------------------------------------------------------sort
+const numbers = [1,154,89,54,55,14,32,21,10,75];
+const sort = numbers.sort(
+   function(a, b){
+      return a - b
+   }
+);
+
+console.log(sort)
+-----------------------------------------------
+const numbers = [5,6,8,7,2,9,1,4,3];
+console.log(numbers.sort())
+----------------------------------------------
+
+const numbers = [1,154,89,54,55,14,32,21,10,75];
+const sort = numbers.sort(
+   function(a, b){
+      return b - a
+   }
+);
+
+console.log(sort)
+
+
+
+

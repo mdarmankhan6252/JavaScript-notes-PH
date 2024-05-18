@@ -1,0 +1,165 @@
+for lop:
+-----------++++++
+
+---------------------------for lope-------------
+
+const fruits = ['Orange', 'Apple', 'Banana', 'Jackfruits', 'Watermelon'];
+
+for(const fruit of fruits){
+   console.log(fruit);
+   console.log('I want to eat')
+}
+
+-------------------while  lope--------------------------
+
+let num = 0;
+while(num < 5){
+   console.log('Loooooooooping', num)
+   num = num + 1;
+}
+
+------------------------------
+let number = 50;
+while(number <= 100){
+   console.log(number);
+   number++;
+}
+-------------sum in while lop--------------------
+let number =  0;
+let sum = 0;
+while(number <= 10){
+   console.log(number);
+   sum = sum + number;
+   console.log('sum: ', sum)
+   number++
+}
+
+-------------------------------------jor nad bigor number in while lop---------------
+let number = 1;
+while(number <= 10){
+   // console.log(number);
+   if(number % 2 === 1){
+      console.log('Even number:', number)
+
+   }
+   number++;
+
+}
+
+-----------------------------for loop-----------------
+for(let i = 1; i <= 10; i++){
+   console.log(i)
+}
+------------------
+for(let number = 0; number < 5 ; number++){
+   console.log(number)
+}
+
+------------------------adding ---------------------
+let sum = 0;
+for(let i = 1; i <= 100; i++){
+   sum = sum + i;
+   console.log(i)
+}
+console.log('Total: ', sum)
+------------------------reverse way--------------------------
+for(let i = 10; i >= 0; i--){
+   console.log(i)
+}
+-------------------while loop--------------------------------
+let x = 20;
+while(x > 10){
+   console.log(x);
+   x--;
+}
+--------------------------------------------
+for(let i = 0; i < 20; i++){
+   if(i%2 === 1){
+      console.log(i)
+   }
+}
+------------------------------------------------
+for(let i = 1; i < 20; i+=2){
+   console.log(i)
+}
+
+-------------------------------------------------
+
+let i = 1;
+while(i < 20){
+   console.log(i)
+   i+=2; // i = i + 2
+}
+---------------------------
+for(let i = 1; i < 30; i++){
+   if(i%5 ===0){
+      console.log(i)
+   }
+}
+
+------------------------------
+for(let i = 1; i < 30; i++){
+   if(i % 3 ===0){
+      console.log(i)
+   }
+}
+
+---------------------------------------
+for(let i = 1; i < 30; i++){
+   if(i % 3 ===0 || i % 5 === 0){
+      console.log(i)
+   }
+}
+
+-------------------------------------
+for(let i = 1; i <= 300; i++){
+   if(i % 3 ===0 && i % 5 === 0){
+      console.log(i)
+   }
+}
+
+---------------------------------------
+let totla = 0;
+for(let i = 1; i <= 20; i++){
+   if(i % 3 === 0){
+      console.log(i);
+      totla = totla + i;
+      console.log('total', totla)
+   }
+}
+console.log('Total of the numbers', totla)
+-------------------break----------------------------
+for (let i = 0; i < 150; i++){
+   console.log(i);
+   if(i >= 5){
+      break;
+   }
+}
+----------------------------------------
+let number = 56;
+while(number > 25){
+   console.log(number);
+   if(number < 50){
+      break
+   }
+   number--;
+}
+
+-----------------------------------------------------
+
+let n = 0;
+while(n < 50){
+   n++;
+   if(n % 5 !==0){
+      continue;
+   }
+   console.log(n)
+   
+}
+-------------------------------------------------------
+let n = 0;
+do{
+   console.log(n);
+   n++;
+}
+while (n < 5)

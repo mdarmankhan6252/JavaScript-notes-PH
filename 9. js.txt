@@ -1,0 +1,15 @@
+JIT compiled language: (just in time);
+proto-typed based:
+1. what is v8?
+2. How to be execute js in browser?
+3. What is v8 machain?
+4. V8 code engine can execute borwer.
+5. What is execution context?
+	i) Global Execution Context(GEC). It can be excessed from everywhere.
+	ii) Function Execution Context(FEC). It can be excessed form this scoop.
+6. What is Global context.
+7. phases
+	i) Creation phase.
+	ii) Execution phase.
+8. What is Call Stack?
+

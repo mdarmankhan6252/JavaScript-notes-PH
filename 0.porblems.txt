@@ -1,0 +1,9 @@
+let x = 'Hello';
+let y = '  hello';
+
+if(x.toLowerCase() === y.toLowerCase()){
+   console.log('You passed!')
+}else{
+   console.log('You failed')
+}
+------------------------------------------------------

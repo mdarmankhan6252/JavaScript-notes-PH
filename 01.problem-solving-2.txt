@@ -1,0 +1,338 @@
+const disha = 58;
+const salman = 89;
+if(disha > salman){
+   console.log('Disha will get the strobery')
+}else{
+   console.log('Salman will eat the strawberry')
+}
+------------------------------------------------------------------------
+
+function getMax(num1, num2){
+   if(num1 > num1){
+      return num1;
+   }
+   else{
+      return num2;
+   }
+}
+const max = getMax(96, 79);
+console.log(max)
+-------------------------------------------------
+function getMax(num1, num2){
+   if(num1 > num2){
+      return num1;
+   }
+   else{
+      return num2;
+   }
+}
+const max1 = getMax(54, 98);
+const  max2 = getMax(99, 45);
+const ultimateMax = getMax(max1, max2);
+console.log(ultimateMax)
+
+---------------------------------------------------------------------
+const jim = 85;
+const tim = 45;
+const kim = 98;
+
+if(jim > tim && jim > kim){
+   console.log('Jim is the boss')
+}else if(tim > jim && tim > kim){
+   console.log('Tim is the boss')
+}else{
+   console.log('Kim is the boss!')
+}
+-------------------------------------------------------------------
+const  max = Math.max(45,65,12,54,569,78,24,412);
+console.log(max)
+
+------------------------------------------------------------------
+function maxNumber (n1,n2, n3){
+   if(n1 > n2 && n1 > n3){
+      return n1
+   }else if(n2 > n1 && n2 > n3){
+      return n2;
+   }else{
+      return n3;
+   }
+}
+const getMaxNum = maxNumber(45,78,12);
+console.log(getMaxNum)
+-------------------------------------------------------------------
+function maxOfThree (jim, tim, kim){
+   if(jim > tim  && jim > kim){
+      return jim;
+   }
+   else if(tim > jim && tim > kim){
+      return tim;
+   }
+   else{
+      return kim
+   }
+}
+const maximumPerson = maxOfThree(50,87,99);
+console.log(maximumPerson)
+----------------------------------------------------------------------------heightest number.
+
+const heights = [45,56,87,45,87,45,64,63,62];
+function getMax(numbers){
+   let max = numbers[0];
+   for(const num of numbers){
+      
+      if(num > max){
+         max = num;
+      }
+   }
+   return max;
+   
+
+}
+const max = getMax(heights);
+console.log('max value is ', max)
+
+--------------------------------------------------------------min number
+
+const heights = [45,56,87,45,87,45,64,63,62];
+function getMin(numbers){
+   let min = numbers[0];
+   for(const num of numbers){
+      
+      if(num < min){
+         min = num;
+      }
+   }
+   return min;
+   
+
+}
+const min = getMin(heights);
+console.log('max value is ', min)
+--------------------------------------------------------------- mobile lowest price;
+const price = [20000, 16000, 50000, 12000, 100000, 35000];
+function getMin(numbers){
+   let min = numbers[0]
+   for(const num of numbers){
+      if(num < min){
+         min = num;
+      }
+   }
+   return min
+}
+const cheap = getMin(price);
+console.log('cheapest one is: ', cheap);
+
+-------------------------------------------------------------------------------------
+const phones = [
+   {
+      name: 'Samsung', price: 20000, camera : '12mp', color: 'Black'
+   },
+   {
+      name: 'Xoami', price: 28000, camera : '12mp', color: 'Black'
+   },
+   {
+      name: 'Oppo', price: 22000, camera : '12mp', color: 'Black'
+   },
+   {
+      name: 'Iphone', price: 120000, camera : '12mp', color: 'Black'
+   },
+   {
+      name: 'Walton', price: 15000, camera : '12mp', color: 'Black'
+   },
+   {
+      name: 'HTC', price: 27000, camera : '12mp', color: 'Black'
+   }
+]
+
+function getCheapestPhone(phones){
+   let min = phones[0]
+   for(const phone of phones){
+      if(phone.price < min.price){
+         min = phone;
+      }
+   }
+   return min
+
+}
+const cheap = getCheapestPhone(phones);
+console.log('Cheapest phone is: ', cheap )
+
+-----------------------------------------------------------------------
+
+const phones = [
+   { name: 'Iphone', price: 150000, color: 'red', camera: '50Mp'},
+   { name: 'Oppo', price: 12000, color: 'red', camera: '50Mp'},
+   { name: 'Walton', price: 123000, color: 'red', camera: '50Mp'},
+   { name: 'Tecno', price: 121000, color: 'red', camera: '50Mp'},
+   { name: 'Iphone', price: 12000, color: 'red', camera: '50Mp'},
+   { name: 'Iphone', price: 100000, color: 'red', camera: '50Mp'}
+]
+
+function getHeightPrice(phones){
+   let max = phones[0]
+   for(const phone of phones){
+      if(phone.price > max.price){
+         max = phone;
+      }
+   }
+   return max
+
+}
+const height = getHeightPrice(phones);
+console.log(height)
+
+-------------------------------------------------------------------------------
+const phones = [
+   {name: 'Iphone', price: 500000, color: 'red'},
+   {name: 'Samsung', price: 50000, color: 'red'},
+   {name: 'Walton', price: 55000, color: 'red'},
+   {name: 'Infinix', price: 65000, color: 'red'},
+   {name: 'Tecno', price: 78000, color: 'red'},
+   {name: 'ViewSonic', price: 25000, color: 'red'}
+]
+
+function getMaxPrice(phones){
+   let max = phones[0]
+   for(const phone of phones){
+      if(phone.price > max.price){
+         max = phone;
+      }
+   }
+   return max
+}
+
+const needMax = getMaxPrice(phones);
+console.log(needMax)
+----------------------------------------------------------------
+const products = [
+   {name: 'Shampoo', price: 300},
+   {name: 'Chiruni', price: 100},
+   {name: 'Shirt', price: 500},
+   {name: 'pant', price: 700}
+]
+
+function getShoppingTotal (products){
+   let total = 0;
+   for(const product of products){
+      total = total + product.price;
+   }
+   return total
+}
+const total = getShoppingTotal(products);
+console.log(total)
+------------------------------------------------------------------total quantity price of products
+const products = [
+   {name: 'Shampoo', price: 300, quantity: 5},
+   {name: 'Chiruni', price: 100, quantity: 4},
+   {name: 'Shirt', price: 500, quantity: 8},
+   {name: 'pant', price: 700, quantity: 2}
+]
+
+function cartTotal(products){
+   let total = 0;
+   for(const product of products){
+      const thisProductCost = product.price * product.quantity;
+      total = total + thisProductCost;
+
+      total = total + product.price;
+   }
+   return  total;
+}
+const shoopingCost = cartTotal(products);
+console.log(shoopingCost)
+--------------------------------------------------------------------------
+const products = [
+   {name: 'Apple', price: 300, kg: 4},
+   {name: 'Orange', price: 250, kg: 3},
+   {name: 'Kiwi', price: 600, kg: 5},
+   {name: 'Banana', price: 120, kg: 2},
+]
+function totalPirce (products){
+   let sum = 0;
+   for(const product of products){
+      sum = sum + product.price
+   }
+   return sum;
+}
+const total = totalPirce(products);
+console.log(total) 
+---------------------------------------------------------------
+
+const products = [
+   {name: 'Apple', price: 300, kg: 4},
+   {name: 'Orange', price: 250, kg: 3},
+   {name: 'Kiwi', price: 600, kg: 5},
+   {name: 'Banana', price: 120, kg: 2}
+]
+function totalPrice (products){
+   let sum = 0;
+   for(const product of products){
+      const cost = product.price * product.kg;
+      sum = sum + cost;
+   }
+   return sum;
+}
+const total = totalPrice(products);
+console.log(total) 
+
+----------------------------------------------------------------------------
+
+// blow 100: ---> 100;
+// more than 100; --- 90
+//more than 110 - 200: 90
+
+function discountedPrice (quantity){
+   if( quantity <= 100){
+      const total = quantity * 100;
+      return total;
+   }
+   else if(quantity <= 200){
+      const total = quantity * 90;
+      return total;
+   }
+   else{
+      const total = quantity * 70;
+      return total
+   }
+}
+
+const total = discountedPrice(900);
+console.log(total)
+
+--------------------------------------------------------------------------------
+function sum (numb1, numb2){
+   return numb1 + numb2;
+}
+function subtract (numb1, numb2){
+   return numb1 - numb2;
+}
+function multiply (numb1, numb2){
+   return numb1 * numb2;
+}
+function divide (numb1, numb2){
+   return numb1 / numb2;
+}
+
+function calculator(a, b, operation){
+   if(operation === 'sum'){
+      const result = sum(a, b)
+      return result;
+   }
+   else if(operation === 'subtract'){
+      const result = subtract(a, b);
+      return  result;
+   }
+   else if(operation === 'multiply'){
+      const result = multiply(a, b);
+      return result;
+   }
+   else if(operation === 'divide'){
+      const result = divide(a, b);
+      return result;
+   }
+   else{
+      return 'Operation is not allowed.'
+   }
+}
+const result = calculator(5,7, 'sum')
+console.log(result)

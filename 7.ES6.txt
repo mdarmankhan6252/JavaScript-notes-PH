@@ -1,0 +1,53 @@
+const actor = {
+   name:'Ananta',
+   age:30,
+   phone:"01875778050",
+   money: 123456789
+}
+
+const {phone,age : boyos} = actor
+
+// const phone = actor.phone;
+// const name = actor.name;
+// const age = actor.age;
+
+console.log(phone);
+console.log(boyos);
+-------------------------------------
+const glass = {
+   name: 'glass',
+   color:'golden',
+   price: 12,
+   isCleaned: true
+}
+
+console.log(glass);
+
+const keys = Object.keys(glass);
+console.log(keys);// [ 'name', 'color', 'price', 'isCleaned' ];
+
+const value = Object.values(glass)
+console.log(value);// [ 'glass', 'golden', 12, true ];
+
+const pair = Object.entries(glass);
+console.log(pair)
+[
+   [ 'name', 'glass' ],
+   [ 'color', 'golden' ],
+   [ 'price', 12 ],
+   [ 'isCleaned', true ]
+ ]
+
+delete korte pari
+delete glass.isCleaned;
+console.log(glass);
+
+const {isCleaned, ...shortGlass} = glass;
+console.log(shortGlass);
+
+Object.freeze(glass);
+glass.source = 'Bangladesh';
+
+console.log(glass)
+
+

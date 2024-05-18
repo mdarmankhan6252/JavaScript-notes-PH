@@ -1,0 +1,221 @@
+const data = [{id:1, name: 'abul', adress: 'Kochu khet'}];
+
+console.log(data[0].adress)
+--------------------------------------------
+const user = {
+   id: 5001,
+   name: "Soriful Raj",
+   address:{
+      street:{
+         fist:"54/1 uttor side",
+         second: "Poribag er goli",
+         third:"no dorai"
+      }
+   }
+}
+
+console.log(user.address.street.second)
+----------------------------------------------------------------
+const user2 = {
+   id: 5002,
+   name: "pori bibir majar",
+   address:{
+      city: "Comilla",
+      country: 'Bangladesh'
+   }
+}
+
+console.log(user2.address.street?.second);
+
+--------------------------------------------------------------------------
+const numbers = [4,5,6,7,8,9];
+const doubled = [];
+for(number of numbers){
+   const double = number * 2;
+   doubled.push(double);
+}
+
+console.log(doubled)
+
+---------------------------------------------------------
+const numbers = [4,5,6,7,8,9];
+
+function doubleIt(num){
+   console.log("number now", num);
+   return num * 2;
+}
+const result = numbers.map(doubleIt);
+console.log(result)
+----------------------------------------------
+const numbers = [4,5,6,7,8,9];
+const double2 = x => x * 2;
+const result = numbers.map(double2);
+console.log(result)
+
+---------------------------------------------------
+const numbers = [4,5,6,7,8,9];
+const result = numbers.map(x => x * 2);
+console.log(result)
+--------------------------------------------------------
+const numbers = [4,5,6,7,8,9];
+const fiveBonus = numbers.map(num => num + 5);
+console.log(fiveBonus)
+-------------------------------------------------------------
+const numbers = [4,5,6,7,8,9];
+const halves = numbers.map(num => num / 2);
+console.log(halves)
+--------------------------------------------------------------
+const friends = ['Tom', 'john', 'Micheal', 'Oliver'];
+
+const lengths = friends.map(fnd => fnd.length);
+console.log(lengths)
+----------------------------------------------------------
+const friends = ['Tom', 'john', 'Micheal', 'Oliver'];
+
+const lengths = friends.map(fnd => fnd[0]);
+console.log(lengths)
+
+============================================
+
+/*
+ 1. Map
+ 2. forEach
+ 3.filter
+ 4.find
+*/
+
+------------
+const numbers = [1,2,3,4,5,6,7,8,9];
+const result = numbers.forEach(n => n * 2);
+
+
+console.log(result);
+----------------------------------------------------------------
+const players = [75,65,67,72,55,59];
+const selected = players.filter(p => p > 70);
+console.log(selected)
+---------------------------------------------------
+const players = [75,65,67,72,55,59];
+const selected = players.filter(p => p > 80);
+console.log(selected)
+------------------------------------------------------------------
+const players = [75,65,67,72,55,59];
+const selected = players.filter(p => p % 2 === 1);
+console.log(selected)
+----------------------------------------------------------------
+const friends = ['arman', 'Khan', 'yeassin', 'tom', 'jom', 'Hello', 'sahazoda'];
+
+const selected = friends.filter(p => p.length > 4);
+console.log(selected)
+--------------------------------------------------------------------
+const players = [75,65,67,72,55,59];
+const selected = players.find(player => player > 70);
+console.log(selected)
+----------------------------------------------------------------------
+const players = [75,65,67,72,55,59];
+const selected = players.find(player => player > 80);
+console.log(selected)
+----------------------------------------------------------------------reduce
+const numbers = [75,65,67,72,55,59];
+const total = numbers.reduce((previous, current) => current, 0);
+console.log(total)
+
+const sum = numbers.reduce((p, c) => p + c ,0)
+console.log(sum)
+----------------------------------------------------------------------------
+const products = [
+   {id:1, name: 'Lenovo', price: 65000},
+   {id:2, name: 'dell', price: 60000},
+   {id:3, name: 'mac', price: 150000}
+]
+
+const names = products.map(product => product.name);
+console.log(names)
+-------------------------------------------------
+const products = [
+   {id:1, name: 'Lenovo', price: 65000},
+   {id:2, name: 'dell', price: 60000},
+   {id:3, name: 'mac', price: 150000}
+]
+
+const affordable = products.find(p => p.price > 62000);
+console.log(affordable);
+----------------------------------------------------------------------class
+class Teacher{
+   constructor(name, subject){
+      this.name = name;
+      this.subject = subject;
+
+   }
+   lecture(){
+      console.log("sir is teaching english.")
+   }
+}
+
+const tapan = new Teacher('topon sir', 'physics');
+console.log(tapan);
+
+const rashid = new Teacher('Rashid', 'English');
+console.log(rashid)
+
+================================================class (na bojle o cholbe)
+class Vehicle{
+   constructor(name, price){
+      this.name = name;
+      this.price = price;
+   }
+   move(){
+      console.log('Gari cole na cole na cole na reeeee');
+   }
+}
+
+class Bus extends Vehicle{
+   constructor(name, price, seat, ticketPrice){
+      super(name, price);
+      this.seat = seat;
+      this.ticketPrice = ticketPrice;
+   }
+
+}
+
+class Truck extends Vehicle{
+   constructor(name, price, load){
+      super(name,price);
+      this.load = load;
+   }
+   
+
+}
+----------------------------------------------------this
+class person{
+   constructor  (name, age){
+      this.name = name;
+      this.age = age
+   }
+}
+
+const kodom = new person('Kodom ali', 21);
+console.log(kodom)
+
+======================================================== function call from another function
+function greeting(greetingHandler, name){
+   greetingHandler(name)
+}
+
+function greetingHandler(name){
+   console.log('Good Morning', name);
+}
+function greetNight(name){
+   console.log('Good night', name)
+
+}
+
+function greetEvening(name){
+   console.log('Good Evening', name)
+}
+
+greeting(greetingHandler, 'Tom Hanks');
+greeting(greetingHandler, 'Tom Brady');
+greeting(greetEvening, 'Tom Brady');
+greeting(greetEvening, 'Tom salman');
+greeting(greetNight, 'Arman');

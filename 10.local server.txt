@@ -1,0 +1,11 @@
+localStorage.getItem('drinks')
+localStorage.setItem('drinks', 'milk')
+localStorage.removeItem('drinks')
+localStorage.clear();
+array and object pawa jay na.
+------------------------------------------------------
+const person = {name: 'lal mia', age:15};
+JSON.stringify(person)
+'{"name":"lal mia","age":15}';
+
+JSON.parse()

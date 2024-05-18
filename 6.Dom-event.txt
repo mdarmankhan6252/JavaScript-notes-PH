@@ -1,0 +1,290 @@
+<button title="This is a tooltip" onclick="console.log(7)">Click me</button>
+<button onclick="console.log(55)">Click kor amake</button>
+------------------------------------------------------------------------------------
+<button onclick="document.body.style.backgroundColor = 'pink'">Make pink</button>
+------------------------------------------------------------------------------------------------------------
+function makeRed(){
+         document.body.style.backgroundColor = 'red'
+ }
+-----------------------------------------------------------------------------------------------
+<button id="makeBlue">Make Blue</button>
+
+----->
+const makeBlueButton = document.getElementById('makeBlue');
+      makeBlueButton.onclick = makeBlue;
+      function makeBlue(){
+         document.body.style.backgroundColor = 'blue'
+      }
+
+---------------------------------------------------------------------------------------------------
+   <button id="makePurple">Make Purple</button>
+------>
+const makePurple = document.getElementById('makePurple');
+makePurple.onclick = function makePurple(){
+   document.body.style.backgroundColor = 'purple'
+}
+
+-------------------------------------------------------------------------------------------------
+   <button id="makePink">Make Pink</button>
+------>
+const pinkButton = document.getElementById('makePink');
+      pinkButton.addEventListener('click',makePink );
+
+      function makePink(){
+         document.body.style.backgroundColor = 'pink';
+      } 
+
+-------------------------------------------------------------------
+   <button id="makeGreen">Make Green</button>
+----------->
+const makeGreenButton = document.getElementById('makeGreen');
+      makeGreenButton.addEventListener('click',function makeGreen(){
+         document.body.style.backgroundColor = 'green'
+      });
+=---------------------------------------------------------------------------------------[useful]
+<button id="makeGoldenrod">Make Goldenrod</button>
+
+document.getElementById('makeGoldenrod').addEventListener('click', function(){
+         document.body.style.backgroundColor = 'goldenrod'
+      })
+
+---------------------------------------------------------------------------event add
+<h1>Final Dom Event Handlers</h1>
+   <h4 id="handlerStatus">Default Text</h4>
+   <button onclick="handelOnClick()">Add onclick Function</button>
+   <script>
+      function handelOnClick (){
+         const handelerStatus = document.getElementById('handlerStatus');
+         handelerStatus.innerText = 'Handled by function attached on onclick attribute.';
+      }
+   </script>
+
+----------------------------------------------------------------------------------------------------------
+<p id="inputTextDisplay">Default input Text</p>
+<input type="text" id="inputField">
+<button id="btnUpdate">Update</button>
+
+document.getElementById('btnUpdate').addEventListener('click', function(){
+         const inputField = document.getElementById('inputField');
+         const inputText = inputField.value;
+
+         const p = document.getElementById('inputTextDisplay');
+         p.innerText = inputText;
+         inputField.value = '';
+ })
+---------------------------------------------------------------------------------------------------------------
+
+<div id="commentContainer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+     </div>
+     <textarea name="" id="newComment" cols="100" rows="5"></textarea><br>
+     <button id="btn">POST</button>
+
+     <script>
+      // step-1
+      document.getElementById('btn').addEventListener('click', function(){
+         // step-2
+         const commentBox = document.getElementById('newComment')
+         const newComment = commentBox.value;
+
+         // step-3:
+
+         const commentContainer = document.getElementById('commentContainer')
+         const p = document.createElement('p');
+         p.innerText = newComment;
+         commentContainer.appendChild(p);
+         // step-4
+         commentBox.value = ''; 
+
+      })
+     </script>
+
+------------------------------------------------------------------------------------------------------------------
+<h1>Explore more event!</h1>
+   <button id="btn-more">Events</button>
+
+   <script>
+      document.getElementById('btn-more').addEventListener('mouseenter', function(){
+         console.log('Event Triggered!')
+      })
+   </script>
+
+--------------------------------------------------------------------------------------
+ document.getElementById('btn-more').addEventListener('mousemove', function(){
+         console.log('Event Triggered!')
+      })
+-------------------------------------------------------------------------------------
+document.getElementById('text-field').addEventListener('focus', function(){
+         console.log('Event is world.')
+      })
+-----------------------------------------------------------------------------------
+document.getElementById('text-field').addEventListener('blur', function(){
+         console.log('Event is world.')
+      })
+-----------------------------------------------------------------------------------------
+<h1>Explore more event!</h1>
+   <button id="btn-more">Events</button>
+   <input type="text" id="text-field">
+
+   <script>
+      document.getElementById('text-field').addEventListener('keydown', function(event){
+         console.log(event.target.value)
+      })
+
+      
+   </script>
+
+------------------------------------------------------------------------------------------------------------------
+<h1>Explore more event!</h1>
+   <button id="btn-more">Events</button>
+   <input type="text" id="text-field">
+
+   <script>
+      document.getElementById('text-field').addEventListener('keypress', function(event){
+         console.log(event.target.value)
+      })
+
+      
+   </script>
+------------------------------------------------------------------------------------------------------------------
+<h1>Explore more event!</h1>
+   <button id="btn-more">Events</button>
+   <input type="text" id="text-field">
+
+   <script>
+      document.getElementById('text-field').addEventListener('keyup', function(event){
+         console.log(event.target.value)
+      })
+
+      
+   </script>
+
+------------------------------------------------------------------------------------------------------------------
+<h1 id="secret-info">My secret info</h1>
+   <input type="text" placeholder="Type delete" id="delete-confirm">
+   <button id="btn-delete" disabled>Delete</button>
+
+   <script>
+      document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+         const text = event.target.value;
+         console.log(text);
+         const deleteBtn = document.getElementById('btn-delete')
+         if(text === 'delete'){
+            deleteBtn.removeAttribute('disabled');
+         }else{
+            deleteBtn.setAttribute('disabled', true)
+         }
+      })
+      document.getElementById('btn-delete').addEventListener('click',function(){
+         const secret = document.getElementById('secret-info');
+         secret.style.display = 'none';
+      })
+
+   </script>
+------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Input Text working</title>
+   <style>
+      body{
+         border: 2px solid #f929d7;
+         
+      }
+      ul{
+         border: 2px solid tomato;
+      }
+      body{
+         border: 2px solid greenyellow;
+      }
+      section{
+         border: 2px solid blueviolet;
+      }
+      #item-2{
+         border: 2px solid purple;
+      }
+
+   </style>
+</head>
+<body id="body">
+   <h1>Exploring event bubble</h1>
+   <section id="list-container">
+      <ul id="list-ul">
+         <li id="item-1">Lorem, ipsum.</li>
+         <li id="item-2">Rem, aliquam.</li>
+         <li id="item-3">Sequi, explicabo.</li>
+         <li id="item-4">Dolorem, nam.</li>
+         <li id="item-5">Quas, sapiente!</li>
+         <li id="item-6">Nihil, ratione!</li>
+      </ul>
+   </section>
+
+   <script>
+      document.getElementById('item-2').addEventListener('click', function(){
+         console.log('Item 2 clicked')
+      })
+      document.getElementById('list-ul').addEventListener('click', function(){
+         console.log('ul clicked')
+      })
+      document.getElementById('list-container').addEventListener('click', function(){
+         console.log('section container clicked');
+      })
+      document.getElementById('body').addEventListener('click', function(){
+         console.log('body is clicked');
+      })
+
+   </script>
+
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Input Text working</title>
+   <style>
+      
+
+   </style>
+</head>
+<body>
+   <h1>Explore event</h1>
+   <section>
+   <ul id="list-container">
+      <li class="item">Lorem ipsum dolor sit amet consectetur.</li>
+      <li class="item">Sed odit adipisci laudantium possimus quos.</li>
+      <li class="item">Doloribus quaerat voluptates perspiciatis mollitia quae.</li>
+      <li class="item">Sed debitis nisi doloremque commodi odio?</li>
+      <li class="item">Rem deleniti officiis ex consectetur sint?</li>
+      <li class="item">Molestiae, accusantium? Eligendi cupiditate provident libero!</li>
+   </ul>
+   <button id="btn-add-item">Add item</button>
+</section>
+
+<script>
+   document.getElementById('list-container').addEventListener('click', function(event){
+      event.target.parentNode.removeChild(event.target)
+
+   })
+
+   document.getElementById('btn-add-item').addEventListener('click', function(){
+      const listContainer = document.getElementById('list-container');
+
+      const li = document.createElement('li');
+      li.innerText = 'brand new item added';
+      li.classList.add('item');
+      listContainer.appendChild(li);
+
+
+   })
+</script>
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------------

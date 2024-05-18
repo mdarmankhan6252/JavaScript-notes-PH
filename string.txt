@@ -1,0 +1,207 @@
+//string is called immutable that means not changeable
+-------------------------------------------------------------
+const capital = 'Dhaka';
+
+capital[1] = 'S'
+console.log(capital);
+
+
+output: Dahka
+----------
+-------------------------=================---------------------------
+//Array is mutable that can be changed the array elements
+
+const numbers = [54,58,658,75,85,56];
+
+numbers[0] = 11;
+
+console.log(numbers)
+
+---------------------------------------------------------tolowercase()
+const school = 'RAJUk Uttara model school';
+
+console.log(school)
+
+console.log(school.toLowerCase())
+
+----------------------------------------------------touppercase()
+
+const school = 'RAJUk Uttara model school';
+
+console.log(school)
+
+console.log(school.toUpperCase())
+
+------------------------------------------------------------
+
+const subject =  'Chemistry';
+const book = 'chemistry';
+
+if(subject.toLowerCase() === book.toLowerCase()){
+   console.log('I am reading Book aibar porikkhali fatai felmu');
+}else{
+   console.log('Hudia prista ultai ar vat khawar jonno');
+}
+
+------------------------------------------------------------trim()
+
+const drink = 'water';
+const liquid = '   water     '
+
+if(drink.trim() === liquid.trim()){
+   console.log('Pani ar opor name life.')
+}else{
+   console.log('Somodre pain ase khaite pari na')
+}
+
+-------------------------------------------------slice
+const address = 'Andorkilla';
+const part = address.slice(2, 5)
+console.log(part)
+--------------------------------------------split
+const sentence = 'I am a good and hardworking person.'
+console.log(sentence.split(' ')) //there is space
+
+const fruits = 'Apple, Banana, kiwi';
+const fruit = fruits.split(',')
+console.log(fruits)
+---------------------------------------------------------------join
+
+const fruits = ['Banana', 'Apple', 'Orange', 'Kiwi', 'Tomato'];
+console.log(fruits.join(' + Arman + '))
+
+---------------------------------------------------------- concat
+const firstName = 'Arman';
+const lastName = ' Khan';
+
+console.log(firstName.concat(lastName))
+
+------------------------------------------------------------------------
+
+const firstName = 'Arman';
+const lastName = ' Khan';
+
+const fullName = firstName.concat(lastName)
+
+console.log(fullName)
+
+-----------------------------------------------------------------
+
+const lastName = 'KhAn'
+
+const include = lastName.includes('a')
+
+if(include){
+   console.log('Asi ree vai, asi')
+}else{
+   console.log('Ami nai ree vai, ami nai')
+}
+----------------------------------------------------------
+
+const sentence = 'I am learning web dev.';
+
+let reverse = ''
+for(const letter of sentence){
+
+   reverse = letter + reverse;
+}
+console.log(reverse)
+
+-----------------------------------------------------------------
+
+const sentence = 'I am learning web dev.';
+for(let x = sentence.length - 1; x >= 0; x--){
+   console.log(sentence[x])
+}
+
+---------------------------------------------------reverse
+
+const sentence2 = 'I am learning web dev.';
+
+const reverse = sentence2.split('').reverse().join('');
+console.log(reverse)
+
+------------------------------------------------------
+
+const person = {
+   name: 'Arman',
+   age: 21,
+   profession: 'Developer',
+   salary: 25000,
+   married: true,
+   'fav place': ['bandorbon', 'Saintmartin', 'Kuakata']
+}
+
+console.log(person.age)
+
+----------------------------------------------------keys
+
+const computer = {
+   brand: 'Lenovo',
+   price: 50000,
+   processor: 'Inter',
+   hdd: '512gb'
+}
+const keys = Object.keys(computer);
+console.log(keys)
+--------------------------------------------------values
+
+const computer = {
+   brand: 'Lenovo',
+   price: 50000,
+   processor: 'Inter',
+   hdd: '512gb'
+}
+const keys = Object.values(computer);
+console.log(values)
+
+-----------------------------------------------------------
+const college = {
+   name: 'BM College',
+   class: ['10','12'],
+   events: ['science fair', 'Bijoy Dibos', '21 feb'],
+   unique: {
+      color: 'red',
+      result:{
+         gpa: 5,
+         merit: 'top'
+      }
+   }
+}
+college.unique.result.merit = 'Top top top most'
+
+
+console.log(college.unique.result.merit);
+college.events[1] = '16 december'
+console.log(college.events[1]);
+----------------------------------------------------- delete
+
+const college = {
+   name: 'BM College',
+   class: ['10','12'],
+   events: ['science fair', 'Bijoy Dibos', '21 feb'],
+   unique: {
+      color: 'red',
+      result:{
+         gpa: 5,
+         merit: 'top'
+      }
+   }
+}
+
+delete college.class
+console.log(college)
+
+-----------------------------------------------------
+const mobile = {
+   brand: 'Samsung',
+   price: 25000,
+   color: 'Black',
+   camera: '12mp'
+
+}
+for(const prop in mobile){
+   console.log(prop)
+}
+
+

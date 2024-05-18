@@ -1,0 +1,184 @@
+function inchToFeet (inch){
+   const feet = inch / 12;
+   return feet;
+}
+
+const armanHeight = inchToFeet(79);
+console.log(armanHeight);
+
+--------------------------------------------------------
+
+function mileToKm(mile){
+   const km = mile * 1.60934;
+   return km;
+}
+const kilo = mileToKm(10);
+console.log(kilo)
+
+-----------------------------------------------dolar to taka
+
+function dolarToTaka(dolar){
+   const money = dolar * 109.77;
+   return money;
+}
+const taka = dolarToTaka(1000)
+console.log(taka);
+------------------------------------------------- leap year
+function isLeapYear(year){
+   if(year % 4 === 0){
+      return true;
+   }else{
+      return false;
+   }
+}
+
+const isLY = isLeapYear(2120);
+console.log(isLY)
+
+-------------------------------------------------------------
+function isLeapYear(year){
+   if(year % 100 !== 0 && year % 4 === 0){
+      return true
+   }else{
+      return false;
+   }
+}
+
+const isLY = isLeapYear(2024);
+console.log(isLY)
+
+--------------------------------------------------------avarage of  odd number
+
+function oddAverage (numbers){
+   const odds = []
+   for(const number of numbers){
+      if(number % 2 === 1){
+         odds.push(number);
+      }
+   }
+   let sum = 0;
+   for(const number of odds){
+      sum = sum + number;
+      
+   }
+   const count = odds.length;
+   console.log(sum)
+   const avg = sum / count;
+   return avg
+}
+const  numbers = [42,65,45,87,98,52,75,89,65,32,36,69,75,105]
+const avg = oddAverage(numbers);
+console.log(avg);
+
+----------------------------------------unique array
+const biryaniKhor = ['Abul', 'Babul', 'Cabul', 'Abul', 'Tabul', 'Babul', 'kabul', 'Mabol']
+
+//const numbers = [1,2,3,4,5,6,7,8,9,5,8,4];
+
+function noDoplicate (array){
+   const unique = []
+   for(const item of array){
+      if(unique.includes(item) === false){
+         unique.push(item);
+      }
+
+   }
+   return unique;
+}
+const uniqueArray = noDoplicate(biryaniKhor);
+console.log(uniqueArray)
+
+---------------------------------------------------------------------unique array
+//const biryaniKhor = ['Abul', 'Babul', 'Cabul', 'Abul', 'Tabul', 'Babul', 'kabul', 'Mabol']
+
+const numbers = [1,2,3,4,5,6,7,8,9,5,8,4];
+
+function noDoplicate (array){
+   const unique = []
+   for(const item of array){
+      if(unique.includes(item) === false){
+         unique.push(item);
+      }
+
+   }
+   return unique;
+}
+const uniqueArray = noDoplicate(numbers);
+console.log(uniqueArray)
+
+
+
+-============================MATH=========================
+const min = Math.min(45,65858,5,875,6,45,5,45,565,45);
+console.log(min)
+
+-----------------------------------------------------------
+const max = Math.max(45,65858,5,875,6,45,5,45,565,45);
+console.log(max);
+---------------------------------------------------
+const pi = Math.PI;
+console.log(pi)
+
+----------------------------------
+console.log(Math.abs(-88))
+------------------------------------
+console.log(Math.abs(500-600))
+------------------------------------------
+console.log(Math.round(2.25))
+------------------------------------------
+console.log(Math.round(2.7))
+------------------------------------------
+console.log(Math.floor(2.7))
+------------------------------------------
+console.log(Math.ceil(2.7))
+------------------------------------------
+console.log(Math.floor(2.99))
+------------------------------------------
+console.log(Math.ceil(2.000001))
+------------------------------------------
+console.log(Math.random())
+------------------------------------------
+console.log(Math.random() * 10)
+------------------------------------------
+console.log(Math.round(Math.random() * 6));
+------------------------------------------
+
+===============================DATE===========================
+const today = new Date();
+---------------------------------------------------------------------
+const date = new Date('2062-10-19')
+console.log(date.getMonth())
+
+=========================temp============================
+let a = 5;
+let b = 7;
+
+console.log(a, b)
+
+const temp = a;
+a = b;
+b = temp;
+
+console.log(a, temp)
+
+------------------------------------------------------------------
+let x = 5;
+let y = 7;
+
+console.log(x, y);
+
+[x, y] = [y, x];
+console.log(x, y);
+
+
+
+
+
+
+
+
+
+
+
+
+
